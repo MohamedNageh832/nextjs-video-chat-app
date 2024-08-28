@@ -47,7 +47,7 @@ const MeetingControls: FC<MeetingControlsProps> = ({ track }) => {
 
       setOwnerId(roomData.ownerId);
     })();
-  }, []);
+  }, [roomId]);
 
   const room = useRoomContext();
   const { toggle: toggleCamera } = setupMediaToggle(Track.Source.Camera, room);

@@ -14,8 +14,6 @@ type MinimalControlsProps = {
 };
 
 const MinimalControls: FC<MinimalControlsProps> = ({ track }) => {
-  if (!track) return null;
-
   const { saveAudioInputEnabled, saveVideoInputEnabled } =
     usePersistentUserChoices({ preventSave: false });
 
@@ -39,6 +37,8 @@ const MinimalControls: FC<MinimalControlsProps> = ({ track }) => {
     toggleCamera(status);
     saveVideoInputEnabled(status);
   }, [track, toggleCamera, saveVideoInputEnabled]);
+
+  if (!track) return null;
 
   return (
     <section className="justify-self-center flex-center gap-4">
