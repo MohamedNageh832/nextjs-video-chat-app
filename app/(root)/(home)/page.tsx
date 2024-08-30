@@ -49,10 +49,14 @@ const Home = async () => {
 
       <HomeBtns />
 
-      <section className="flex flex-wrap gap-3">
-        {publicMeetings.map((room) => (
-          <PublicMeetingCard key={room.id} data={room} />
-        ))}
+      <section className="flex flex-col gap-5">
+        <h2 className="text-2xl font-bold">Public rooms</h2>
+
+        <section className="flex flex-wrap gap-3">
+          {publicMeetings.map((room) => (
+            <PublicMeetingCard key={room.id} data={room} />
+          ))}
+        </section>
       </section>
 
       <StartMeetingModal />
