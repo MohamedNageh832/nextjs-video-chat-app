@@ -1,4 +1,5 @@
 import HomeBtns from "@/components/HomeBtns";
+import JoinMeetingModal from "@/components/modals/JoinMeetingModal";
 import StartMeetingModal from "@/components/modals/StartMeetingModal";
 import PublicMeetingCard from "@/components/PublicMeetingCard";
 import { db } from "@/lib/db";
@@ -60,6 +61,7 @@ const Home = async () => {
       </section>
 
       <StartMeetingModal />
+      <JoinMeetingModal />
     </section>
   );
 };

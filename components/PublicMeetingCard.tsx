@@ -66,7 +66,7 @@ const PublicMeetingCard: FC<PublicMeetingCardProps> = ({ data }) => {
           <span className="text-sm">
             Start time:{" "}
             {isRunning ? (
-              <Badge variant="destructive">is running</Badge>
+              <Badge variant="success">is running</Badge>
             ) : (
               <Badge variant="secondary">{time}</Badge>
             )}
